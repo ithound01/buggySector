@@ -1,0 +1,201 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "arial", sans-serif;
+	font-size: 18px;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.background {
+	width: 100vw;
+	height: 100vh;
+	background-color: #274472;
+}
+
+.main-interface {
+	background-color: #5885AF;
+	width: 24rem;
+	height: 36rem;
+	border-radius: 6%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* -----Screen----- */
+.screen {
+	background-color: #C3E0E5;
+	position: absolute;
+	top: 5%;
+	left: 7.5%;
+	width: 85%;
+	height: 19%;
+	border-radius: 6%;
+}
+
+.screen-num {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	padding-right: 2%;
+}
+
+.screen-main {
+	font-size: 300%;
+	padding-top: 15%;
+}
+
+.screen-aux {
+	font-size: 150%;
+	padding-top: 3%;
+}
+/* ---------- */
+
+/* -----Number Panel----- */
+.panel-background {
+	position: absolute;
+	top: 30%;
+	left: 7.5%;
+	width: 85%;
+	height: 65%;
+	border-radius: 6%;
+	background-color: #C3E0E5;
+}
+
+.panel {
+	position: absolute;
+	width: 90%;
+	top: 9%;
+	left: 5%;
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	;
+	grid-template-areas: 
+	"back slash star minus C"
+	"seven eight nine plus CE"
+	"four five six plus plusMinus"
+	"one two three equal inverse"
+	"zero zero dot equal rootSquare"
+	;
+	grid-gap: 0.2rem;
+}
+
+.btn {
+	border: 2px solid #4C5270;
+	border-radius: 6%;
+	text-align: center;
+	font-size: 320%;
+	color: #41729F;
+}
+
+.btn:hover {
+	color: #274472;
+}
+
+.btn-clicked {
+	background-color: white;
+}
+
+.btn-back {
+	grid-area: back;
+}
+
+.btn-num-9 {
+	grid-area: nine;
+}
+
+.btn-num-8 {
+	grid-area: eight;
+}
+
+.btn-num-7 {
+	grid-area: seven;
+}
+
+.btn-num-6 {
+	grid-area: six;
+}
+
+.btn-num-5 {
+	grid-area: five;
+}
+
+.btn-num-4 {
+	grid-area: four;
+}
+
+.btn-num-3 {
+	grid-area: three;
+}
+
+.btn-num-2 {
+	grid-area: two;
+}
+
+.btn-num-1 {
+	grid-area: one;
+}
+
+.btn-num-0 {
+	grid-area: zero;
+}
+
+.btn-num-dot {
+	grid-area: dot;
+}
+
+.btn-slash {
+	grid-area: slash;
+}
+
+.btn-star {
+	grid-area: star;
+}
+
+.btn-minus {
+	grid-area: minus;
+}
+
+.btn-plus {
+	grid-area: plus;
+	line-height: 240%;
+}
+
+.btn-equal {
+	grid-area: equal;
+	line-height: 240%;
+}
+
+.btn-plusMinus {
+	grid-area: plusMinus;
+	line-height: 25%;
+	font-size: 300%;
+	padding-top: 30%;
+}
+
+.btn-C {
+	grid-area: C;
+}
+
+.btn-CE {
+	grid-area: CE;
+	font-size: 200%;
+	padding-top: 20%;
+}
+
+.btn-inverse {
+	grid-area: inverse;
+	font-size: 200%;
+	padding-top: 22%;
+}
+
+.btn-rootSquare {
+	grid-area: rootSquare;
+	font-size: 230%;
+	padding-top: 20%;
+	padding-right:15%;
+}
