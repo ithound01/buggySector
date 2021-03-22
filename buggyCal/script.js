@@ -56,7 +56,7 @@ const keyZeroEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "0";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -68,7 +68,7 @@ const keyOneEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "1";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -81,7 +81,7 @@ const keyTwoEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "2";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -94,7 +94,7 @@ const keyThreeEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "3";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 }
 
@@ -107,7 +107,7 @@ const keyFourEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "4";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -120,7 +120,7 @@ const keyFiveEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "5";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -133,7 +133,7 @@ const keySixEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "6";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -146,7 +146,7 @@ const keySevenEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "7";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -159,7 +159,7 @@ const keyEightEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "8";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -172,7 +172,7 @@ const keyNineEvent = function() {
 	} else {
 		mainScreen.innerHTML = mainScreen.textContent + "9";
 	}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 };
 
@@ -214,7 +214,7 @@ const calculate = function() {
 				mainScreen.innerHTML = plus(calcArr[0], calcArr[2]);
 				break;
 		}
-	//control number of digitals
+	//control number of digits
 	mainScreen.innerHTML = controlDigits(mainScreen.textContent);
 }
 
@@ -321,6 +321,7 @@ const main = function() {
 		else if (e.key === "8") keyEightEvent();
 		else if (e.key === "9") keyNineEvent();
 		else if (e.key === "=") keyEqualEvent();
+		else if (e.key === "Enter") keyEqualEvent();
 		else if (e.key === "/") keySlashEvent();
 		else if (e.key === "*") keyStarEvent();
 		else if (e.key === "-") keyMinusEvent();
