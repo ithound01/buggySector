@@ -1,0 +1,54 @@
+* {
+	font-size: 18px;
+	margin: 0;
+}
+
+.container {
+	position: absolute;
+	display: grid;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+	"ice-bin manual"
+	"sp-rack manual";
+	width: 32rem;
+	height: 40rem;
+	grid-gap: 20px;
+}
+
+.ice-bin {
+	grid-area: ice-bin;
+	border-collapse: separate;
+	border-spacing: 0.5rem 0.5rem;
+	border: 1px solid grey;
+}
+
+.sp-rack {
+	grid-area: sp-rack;
+	border: 2px solid grey;
+	border-radius: 5%;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.sp-bottle {
+	background-color: grey;
+	border: 2.5px solid transparent;
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.sp-bottle-selected {
+	/*border: px solid xxxx; */
+}
+
+.manual {
+	grid-area: manual;
+	border: 1px solid grey;
+	
+}
+
