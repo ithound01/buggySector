@@ -6,20 +6,26 @@
 }
 
 .container {
-	position: absolute;
+	position: relative;
 	display: grid;
-	top: 50vh;
-	left: 50vw;
-	transform: translate(-50%, -50%);
+	margin: 2vh auto auto auto;
 	grid-template-columns: 1fr 1.5fr;
-	grid-template-rows: 1fr 1.5fr;
+	grid-template-rows: 0.2fr 1fr 1.5fr;
 	grid-template-areas:
+	"select-button select-button"
 	"ice-bin manual"
 	"sp-rack manual";
 	width: 40rem;
 	height: 42rem;
 	grid-gap: 20px;
 }
+
+.select-button {
+	grid-area: select-button;
+	height: 2.5rem;
+	width: 10rem;
+}
+
 
 .ice-bin {
 	grid-area: ice-bin;
@@ -56,7 +62,7 @@
 	padding: 2% 5%;
 }
 
-.manual p {
+.manual pre {
 	font-size: 0.9rem;
 }
 

@@ -1,7 +1,7 @@
 "use strict"
 
 const cocktail = class {
-	constructor(name, ingredients, method, remarks) {
+	constructor(name, ingredients, method, remarks="NA") {
 		this.name = name;
 		this.ingredients = ingredients;
 		this.method = method;
@@ -9,25 +9,25 @@ const cocktail = class {
 	}
 }
 
-const chooseCocktail = function(cocktail) {
+const displayCocktail = function(cocktail) {
 	//display Name
-	console.log(cocktail.name);
 	document.querySelector(".manual-name").textContent = `Name: ${cocktail.name}`;
 	
 	//display Ingredients
-	console.log(cocktail.ingredients);
-	let ingredientsText = ""
-	cocktail.ingredients.forEach(function(ing) {
-		ingredientsText += `${ing}, `;
-	})
-	ingredientsText = ingredientsText.slice(0, ingredientsText.length - 2);
-	document.querySelector(".manual-ingredients").textContent = `Ingredients: ${ingredientsText}`;
+	let tempArr = [];
+	for (const [k, v] of Object.entries(cocktail.ingredients)) {
+		tempArr.push(`${k}: ${v}`);
+	}
+	document.querySelector(".manual-ingredients").innerHTML = `Ingredients: ${tempArr.join(",<br>		    ")}`;
 	
 	//display Method
-	console.log(cocktail.method);
+	document.querySelector(".manual-method").innerHTML = `Method: ${cocktail.method}`
 	
 	//display Remarks
-	console.log(cocktail.remarks);
+	document.querySelector(".manual-remarks").innerHTML = `Remarks: ${cocktail.remarks}`
+	
+	//choose bottles in the bin and the rack
+	//write
 }
 
 const assignBottleToIdAndColor = function(bottleName, id, color) {
@@ -44,11 +44,22 @@ const main = function() {
 	
 	
 }
-main();
 
+main();
 
 
 //-----------------------------test
 document.getElementById("b1-1").classList.toggle("sp-bottle-selected");
 
-const bloodymary = new cocktail("Bloody Mary", ["strawberry", "tomato"], "Mixing", "NA");
+const bloodymary = new cocktail("Bloody Mary", {"strawberry": "20ml", "tomato": "50ml"}, "Mixing");
+const oldFashioned = new cocktail("Old-Fashioned", {"whisky": "45ml", "sugar": "a bit"}, "Mixing");
+
+const selectButton = document.querySelector(".select-button");
+
+selectButton.addEventListener("click", function() {
+	if(selectButton.selectedIndex === 1) {
+		displayCocktail(bloodymary);
+	} else if (selectButton.selectedIndex === 2) {
+		displayCocktail(oldFashioned);
+	}
+})
